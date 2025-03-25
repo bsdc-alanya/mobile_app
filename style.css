@@ -1,3 +1,17 @@
-body{
-    background-color: green;
+/*
+don't touch; use <style> in your documents
+- amy
+*/
+ 
+/* no space around the document */
+html, body {
+    padding: 0%; margin: 0%;
+}
+ 
+/* adds margins on the sides for non-phone devices */
+@media screen and (min-width: 900px) {
+    body {
+        margin-left: 30%;
+        margin-right: 30%;
+    }
 }
