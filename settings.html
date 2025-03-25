@@ -2,10 +2,284 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <!-- Daniel --->
+     <img src="/Picture1.png" alt="BookU-Logo" class="BookU-Logo">
+     <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      <style>
+        body {
+            background-color: white;
+            color: black;
+            transition: background-color 0.3s, color 0.3s;
+        }
+    
+        .dark-mode {
+            background-color: black;
+            color: rgb(107, 107, 107);
+        }
+    
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+    
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+    
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="dark-mode25">
+        <h1>Apperance</h1>
+        <button onclick="toggleDarkMode()" class="button-for-dark"> Dark Mode</button></div>
+    
+    
+    
+    <script>
+        function toggleDropdown() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    
+        window.onclick = function(event) {
+            if (!event.target.matches('button')) {
+                var menu = document.getElementById("menu");
+                if (menu.style.display === "block") {
+                    menu.style.display = "none";
+                }
+            }
+        }
+    
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+    
+     <div class="box-1">
+        <h1>Account</h1>
+     <div class="dropdown">
+        <button onclick="toggleDropdown()"><img src="/58f8bcf70ed2bdaf7c128307.png" alt="down-arrow" class="down-arrow"></button>
+        <div class="dropdown-content" id="menu">
+            <a href="#">Link 1</a><br>
+            <a href="#">Link 2</a><br>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+     </div>
+     <div class="box-2">
+        <h1>Notifications</h1>
+     <div class="dropdown">
+        <button onclick="toggleDropdown()"><img src="/58f8bcf70ed2bdaf7c128307.png" alt="down-arrow" class="down-arrow"></button>
+        <div class="dropdown-content" id="menu">
+            <a href="#">Link 1</a><br>
+            <a href="#">Link 2</a><br>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+     </div>
+     <div class="box-1">
+        <h1>Privacy and Security</h1>
+     <div class="dropdown">
+        <button onclick="toggleDropdown()"><img src="/58f8bcf70ed2bdaf7c128307.png" alt="down-arrow" class="down-arrow"></button>
+        <div class="dropdown-content" id="menu">
+            <a href="#">Link 1</a><br>
+            <a href="#">Link 2</a><br>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+     </div>
+     <div class="box-1">
+        <h1>Help and Support</h1>
+     <div class="dropdown">
+        <button onclick="toggleDropdown()"><img src="/58f8bcf70ed2bdaf7c128307.png" alt="down-arrow" class="down-arrow"></button>
+        <div class="dropdown-content" id="menu">
+            <a href="#">Link 1</a><br>
+            <a href="#">Link 2</a><br>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+     </div>
+     <div class="box-1">
+        <h1>Language and Region</h1>
+     <div class="dropdown">
+        <button onclick="toggleDropdown()"><img src="/58f8bcf70ed2bdaf7c128307.png" alt="down-arrow" class="down-arrow"></button>
+        <div class="dropdown-content" id="menu">
+            <a href="#">Link 1</a><br>
+            <a href="#">Link 2</a><br>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+     </div>
+     <div class="back-button1">
+        <a href="#homepage"><img src="/vecteezy_black-arrows-direction_29802157.png" alt="back-button" class="back-button"></a>
+     </div>
+
+    
+
+
 </body>
+<style>
+    .button-for-dark{
+        float: right;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+    }
+    .dark-mode25{
+        width: 100%;
+        background-color: rgb(230, 230, 230);
+        border-radius: 10px;
+        height: 100px;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .box-1{
+        width: 100%;
+        background-color: rgb(230, 230, 230);
+        border-radius: 10px;
+        height: 100px;
+        padding: 20px;
+        margin-top: 20px;
+        
+        
+    }
+    .box-2{
+        width: 100%;
+        background-color: rgb(230, 230, 230);
+        border-radius: 10px;
+        height: 100px;
+        padding: 20px;
+        margin-top: 20px;  
+    }
+    .dropdown {
+        position: relative;
+        
+        float: right;
+
+        
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(230, 230, 230);
+        width: 500px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    button{
+        background-color: rgba(75, 74, 74, 0);
+        
+        
+        
+    }
+    .BookU-Logo{
+        width: 100%;
+        height: 300px;
+        border-radius: 20px;
+        
+        
+        
+    }
+    .down-arrow{
+        height: 30px;
+        width: 30px;
+        border-radius: 5px;
+        
+    }
+    .back-button1{
+        width: 100%;
+        background-color: rgba(230, 230, 230, 0);
+        border-radius: 10px;
+        height: 100px;
+        padding: 10px;
+        margin-top: 20px; 
+
+    }
+    .back-button{
+        float: left;
+        height: 80px;
+    }
+</style>
+<script>
+    function toggleDropdown() {
+        var menu = document.getElementById("menu");
+        if (menu.style.display === "block") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "block";
+        }
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.matches('button')) {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            }
+        }
+    }
+</script>
+<style>
+    body {
+        background-color: white;
+        color: black;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dark-mode {
+        background-color: black;
+        color: white;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+</style>
+
 </html>
