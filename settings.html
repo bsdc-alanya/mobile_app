@@ -9,14 +9,10 @@
 <body>
     <!-- Daniel --->
      <img src="res/Picture1.png" alt="BookU-Logo" class="BookU-Logo">
-     <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
+     
+      <div class="search-container">
+        <input type="text" placeholder="Search...">
+    </div>
       <style>
         body {
             background-color: white;
@@ -46,6 +42,21 @@
     
         .dropdown:hover .dropdown-content {
             display: block;
+        }
+        .search-container {
+            text-align: center;
+            margin: 20px;
+            background-color: #ccc;
+            border-radius: 20px;
+        }
+
+        input {
+            width: 250px;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            
         }
     </style>
     </head>
