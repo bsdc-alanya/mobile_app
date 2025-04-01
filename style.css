@@ -9,10 +9,10 @@ html, body {
     font-family: sans-serif;
 }
  
-/* adds margins on the sides for non-phone devices */
+/* adds margins on the sides for non-phone devices 
 @media screen and (min-width: 900px) {
     body {
         margin-left: 30%;
         margin-right: 30%;
     }
-}
+}*/
