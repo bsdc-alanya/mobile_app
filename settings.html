@@ -10,10 +10,28 @@
     <!-- Daniel --->
      <img src="res/Picture1.png" alt="BookU-Logo" class="BookU-Logo">
      
-      <div class="search-container">
-        <input type="text" placeholder="Search...">
+     <div class="search-container">
+        <a href=""><img src="res/588a6507d06f6719692a2d15 (1).png" alt="" class="three-lines"></a>
+        <input type="text" id="search" placeholder="Search ...">
+        <a href=""><img src="res/search.png" alt="" class="Search-symbol"></a>
+
     </div>
+
+    
       <style>
+        .three-lines{
+            width:20px;
+            height: 20px;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+        .Search-symbol{
+            height: 20px;
+            width: 20px;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
         body {
             background-color: white;
             color: black;
@@ -48,15 +66,47 @@
             margin: 20px;
             background-color: #ccc;
             border-radius: 20px;
+            display: flex;
+            
+            
         }
 
         input {
-            width: 250px;
+            width: 80%;
             padding: 8px;
             font-size: 16px;
             border: 1px solid #ccc;
             border-radius: 20px;
             
+        }
+        .search-container {
+            margin-bottom: 20px;
+        }
+
+        #search {
+            width: 80%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            background-color: #ccc;
+        }
+
+        /* List styling */
+        .item-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .item-list li {
+            padding: 8px;
+            background-color: #f0f0f0;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        .hidden {
+            display: none;
         }
     </style>
     </head>
@@ -68,6 +118,21 @@
     
     
     <script>
+        
+        document.getElementById("search").addEventListener("input", function() {
+            let filter = this.value.toLowerCase();
+            let items = document.querySelectorAll(".item-list li");
+
+            items.forEach(item => {
+                let text = item.textContent.toLowerCase();
+                if (text.includes(filter)) {
+                    item.classList.remove("hidden");
+                } else {
+                    item.classList.add("hidden");
+                }
+            });
+        });
+    
         function toggleDropdown() {
             var menu = document.getElementById("menu");
             if (menu.style.display === "block") {
