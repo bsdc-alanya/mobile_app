@@ -6,14 +6,15 @@
     <link rel="stylesheet" href="style.css">
     <title>Product</title>
     <style>
-            body{
+        body{
             text-align: center;
             font-family: sans-serif;
             color: white;
-            font-size: 150%;
-            }
-            .page{
+            font-size: 120%;
+        }
+        .page{
             position: relative;
+            width: 100%s;
         }
         .image{
             width: 100%;
@@ -30,14 +31,37 @@
             width: 100%;
             top: 69%;
         }
+        .Ktext{
+            color: black;
+            margin-bottom: 0px;
+            padding-bottom: 0;
+        }
         .stars{
             width: 50%;
+            margin-top: 0;
+            padding-top: 0;
         }
-        .finger{
-            position: absolute;
-            left: 20%;
-            top: 28%;
+        .under_stars{
+           display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 1rem;
+
         }
+
+        .under_stars .item {
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            align-items: center;
+
+        }
+
+        .under_stars .item img {
+            height: 50px;
+            width: 50px;
+        }
+        
     </style>
     
 </head>
@@ -45,9 +69,20 @@
     <div class="page">
         <img class="image" src="res/keyboeadfr.png"></img>
         <div class="keyboardtext">
-            <p><strong>Keyboards</strong></p>
+            <h2 class="Ktext"><strong>Keyboards</strong></h2>
             <img class="stars" src="res/three-out-of-five-stars.png">
-            <img class="finger" src="res/finger.png">
+            <div class="under_stars">
+                <div class="item">
+                    <img src="res/finger.png" >
+                    <p>Available to order</p>
+                </div>
+               <div>
+                <img src="res/finger.png">
+                <p></p>
+               </div>
+            </div>
+   
+            <p></p>
         </div>
     </div>
     <!-- Alanya --->

@@ -2,6 +2,10 @@
 don't touch; use <style> in your documents
 - amy
 */
+
+* {
+    touch-action: manipulation;
+}
  
 /* no space around the document */
 html, body {
