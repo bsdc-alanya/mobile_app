@@ -15,10 +15,13 @@
         .logoheader {
             padding: 5%;
             border-bottom-left-radius: 10%; border-bottom-right-radius: 10%;
+            display: flex;
             background-color: #407aff;
         }
-        .logoimage {}
-
+        .logoimage {
+        width: 100%;
+        height:25%;
+        }
     </style>
 </head>
 <body>
@@ -26,10 +29,25 @@
         <img src="res/booku.png"></img>
         <h1>BookU</h1>
     </header>
+    <style>body {
+        text-align: center;
+        font-family: sans-serif;
+        color: black;
+        font-size: 150%; }
+        .scrollme {
+        overflow-y: auto;
+}
+        </style>
+<h3>Most popular</h3>
+<div class="scrollme">                        
+    <table class="table table-responsive">
+        <img src="res/multicoloured-mouse.avif" style="width: 200px;", ></img>
+        <img src="res/keyboeadfr.png" style="width: 200px;"onclick="location.replace('product_page.html')"></img>
+    </table>
+  </div>
 
-    <img src="res/multicoloured-mouse.avif"></img>
+    <h3>Reccommended</h3>
+
     <br>
-    
-    <!--<p class="loginbutton" onclick="location.replace('INSERT-PAGE.html')">Login</p> --> 
 </body>
 </html>
