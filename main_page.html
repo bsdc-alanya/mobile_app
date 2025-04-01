@@ -36,19 +36,26 @@
         font-family: sans-serif;
         color: black;
         font-size: 150%; }
-        
-    .scrollme {
-        overflow-y: auto;
-}
+        .scrollable {
+            
+            flex-direction: row;
+            width: 100%; 
+            height: 200px; 
+            overflow-x: auto; 
+            overflow-y: hidden; 
+            white-space: nowrap; 
+        }
+        .content {
+            width: 100%;
+        }
         </style>
-<h3>Most popular</h3>
-<div class="scrollme">                        
-    <table class="table table-responsive">
-        <img src="res/multicoloured-mouse.avif" style="width: 200px;", ></img>
-        <img src="res/keyboeadfr.png" style="width: 200px;"onclick="location.replace('product_page.html')"></img>
-    </table>
-  </div>
-
+<h3>Most popular</h3>  
+<div class="scrollable">
+    <div class="content">
+   <img src="res/multicoloured-mouse.avif" style="width: 200px;", ></img>
+    <img src="res/keyboeadfr.png" style="width: 200px;"onclick="location.replace('product_page.html')"></img>
+    </div>
+    </div>        
     <h3>Reccommended</h3>
 
     <br>
