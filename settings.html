@@ -9,7 +9,7 @@
 <body>
     <!-- Daniel --->
     <header class="logoheader">
-        <img src="res/booku.png"></img>
+        <a><img src="res/booku.png" onclick= "location.replace('main_page.html')"></img></a>
         <h1>BookU</h1>
         <button class="settings">
             </button></header>
@@ -23,7 +23,9 @@
 
     
       <style>
-       
+       h1 {
+        color: white;
+       }
         .three-lines{
             width:20px;
             height: 20px;
@@ -183,6 +185,11 @@
         <div class="container">
             <h1>Notifications</h1>
             <button class="expand-btn"><img src="res/58f8bcf70ed2bdaf7c128307.png" alt="down-arrow" class="down-arrow"></button>
+            <br>
+            <br>
+            <div class="Notifications-center">
+                <h3>notifications will show up here</h3>
+            </div>
         </div>
 
         <div class="container">
@@ -197,6 +204,11 @@
         <div class="container">
             <h1>Help and Support</h1>
             <button class="expand-btn"><img src="res/58f8bcf70ed2bdaf7c128307.png" alt="down-arrow" class="down-arrow"></button>
+            <br>
+            <br>
+            <h1>Contact Us:</h1>
+            <h2>Email:Booku@gmail.com</h2>
+            <h2>Number:07394565828827</h2>
         </div>
 
         <div class="container">
@@ -229,6 +241,11 @@
 
 </body>
 <style>
+    .Notifications-center{
+        background-color: rgb(150, 150, 150);
+        height: 300px;
+        border-radius: 15px;
+    }
    
     .button-for-dark{
         float: right;
@@ -322,7 +339,7 @@
 }
 
 .dropdown-menu-open {
-  max-height: 200px;
+  max-height: 500px;
   transition: all 0.3s ease;
 }
 .container {
@@ -342,7 +359,7 @@
 
         /* Expanded class for JS toggle */
         .expanded {
-            height: 260px !important;
+            height: 500px !important;
         }
 
         /* Style for button */
