@@ -100,14 +100,22 @@
             border-radius: 20px;
             border: none;
         }
+
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+            y: 20
+        }
         
     </style>
     
 </head>
 <body>
     <div class="page">
+        
         <img class="image" src="res/keyboeadfr.png"></img>
         <div class="keyboardtext">
+            
             <h2 class="Ktext"><strong>Keyboards</strong></h2>
             <img class="stars" src="res/three-out-of-five-stars.png">
             <div class="under_stars">
@@ -125,12 +133,12 @@
             <p class="ToO"><strong>Time of Order:</strong></p>
             <div class="check">
             <input type="checkbox" id="ReqNow" name="ReqNow" value="ReqNow">
-            <p>   Required Now</p>
+            <p>Required Now</p>
         </div>
 
         
             <div class="check2">
-            <input type="checkbox" id="Future" name="Future" value="Future">
+            <input type="checkbox" id="Future" name="Future" value="true">
             <p>   Future Booking</p>
 
             
@@ -141,6 +149,7 @@
         </div>
     </div>
     </div>
-    <!-- Alanya --->
+    <!-- Alanya smells --->
 </body>
+<script src="./product_page.js"></script>
 </html>
