@@ -12,6 +12,16 @@
             color: white;
             font-size: 120%;
         }
+        .settings { 
+            height: 54px;
+            width: 56px;
+            position: absolute;
+            top:20px; left: 20px;
+            padding: 0%;
+            color: rgb(70, 70, 70);
+            background-color: rgb(70, 70, 70);
+            border-radius: 36%;
+        }
         .page{
             position: relative;
             width: 100%;
@@ -112,12 +122,18 @@
             left: 10%;
             width: 60%;
         }
+
         
     </style>
     
 </head>
 <body>
     <div class="page">
+
+        <button class="settings"> 
+            <img src="res/icons8-settings-48.png" onclick="location.replace('settings.html')">
+            </button>
+
         
         <img class="image" src="res/keyboeadfr.png"></img>
         <div class="keyboardtext">
