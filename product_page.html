@@ -14,7 +14,7 @@
         }
         .page{
             position: relative;
-            width: 100%s;
+            width: 100%;
         }
         .image{
             width: 100%;
@@ -61,6 +61,37 @@
             height: 50px;
             width: 50px;
         }
+        .lowerhalf{
+            margin-top: -30px;
+
+        }
+
+        .ToO{
+            font-size: 23px;
+        }
+        .check{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: -20px;
+            margin-bottom: 0;
+        }
+        .check2{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: -30px;
+        }
+        .Request{
+            margin-top: -2px;
+            margin-bottom: 0px;
+            font-size: 20px;
+        }
+        .Order{
+            display: block;
+        }
         
     </style>
     
@@ -81,9 +112,22 @@
                 <p>Usable for 2-3 weeks</p>
                </div>
             </div>
-   
-            <p></p>
+
+            <div class="lowerhalf">
+            <p class="ToO"><strong>Time of Order:</strong></p>
+            <div class="check">
+            <input type="checkbox" id="ReqNow" name="ReqNow" value="ReqNow">
+            <p>   Required Now</p>
         </div>
+            <div class="check2">
+            <input type="checkbox" id="Future" name="Future" value="Future">
+            <p>   Future Booking</p>
+        </div>
+        <p class="Request"><strong> Amount Request:</strong></p>
+        <input type="number" class="amount" name="amount">
+        <button class="Order">Place Order</button>
+        </div>
+    </div>
     </div>
     <!-- Alanya --->
 </body>
