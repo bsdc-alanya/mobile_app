@@ -17,7 +17,7 @@
         <br>
         
         
-        <h1 class="no-font-change">BookU</h1>
+        <h1 class="header1">BookU</h1>
         
             </header>
      
@@ -27,6 +27,9 @@
         <a href=""><img src="res/search.png" alt="" class="Search-symbol"></a>
 
     </div>
+    
+
+    
     
     
   <!-- Google Translate Script -->
@@ -42,8 +45,10 @@
 
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;600&family=Roboto&family=Playfair+Display&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400&family=Roboto&family=Playfair+Display&display=swap" rel="stylesheet">
+  <div class="content">
+   
+  
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -63,13 +68,11 @@
       margin-bottom: 30px;
     }
 
-    #fontButton:hover {
-      background-color: #0056b3;
-    }
-
     .content {
       font-size: 22px;
     }
+
+   
   </style>
 </head>
 
@@ -88,9 +91,9 @@
   margin-top: 20px;
   font-size: 24px;
 }
-       .no-font-change {
-        color: white;
-        
+       .header1 {
+        color: rgb(255, 255, 255);
+        font-weight: 700;
        }
         .three-lines{
             width:20px;
@@ -468,25 +471,25 @@
         }
 </style>
 <script>
-const fonts = [
-  "'Poppins', sans-serif",
-  "'Roboto', sans-serif",
-  "'Lobster', cursive",
-  "'Playfair Display', serif"
-];
+ const fonts = [
+      "'Poppins', sans-serif",
+      "'Roboto', sans-serif",
+      "'Lobster', cursive",
+      "'Playfair Display', serif"
+    ];
 
-let currentFont = 0;
+    let currentFont = 0;
 
-document.getElementById("fontButton").addEventListener("click", () => {
-  currentFont = (currentFont + 1) % fonts.length;
-  
-  // Apply font to all elements EXCEPT those with .no-font-change
-  document.querySelectorAll("*:not(.no-font-change)").forEach(el => {
-    el.style.fontFamily = fonts[currentFont];
-  });
-});
+    document.getElementById("fontButton").addEventListener("click", () => {
+      currentFont = (currentFont + 1) % fonts.length;
+
+      // Apply font to all elements inside .content except .no-font-change
+      document.querySelectorAll(".content *:not(.no-font-change)").forEach(el => {
+        el.style.fontFamily = fonts[currentFont];
+      });
+    });
 
   </script>
 
-
+</div>
 </html>
