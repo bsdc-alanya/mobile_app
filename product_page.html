@@ -104,7 +104,11 @@
         .hidden {
             opacity: 0;
             pointer-events: none;
-            y: 20
+        }
+        #FutureCalendar {
+            position: absolute;
+            top: 20%; text-align: center;
+            width: 60%;
         }
         
     </style>
@@ -140,6 +144,7 @@
             <div class="check2">
             <input type="checkbox" id="Future" name="Future" value="true">
             <p>   Future Booking</p>
+            <img id="FutureCalendar" src="res/calander.jpg" class="hidden"></img>
 
             
         </div>
@@ -149,7 +154,15 @@
         </div>
     </div>
     </div>
-    <!-- Alanya smells --->
+    <!-- Alanya smells ---> 
 </body>
-<script src="./product_page.js"></script>
+<script>
+    const futureBooking = document.getElementById("Future")
+    const futureBookingCalendar = document.getElementById("FutureCalendar")
+
+    futureBooking.addEventListener("click", function (e) {
+        if (e.target.checked) { futureBookingCalendar.classList.remove("hidden") } 
+        else { futureBookingCalendar.classList.add("hidden") }
+    })
+</script>
 </html>
