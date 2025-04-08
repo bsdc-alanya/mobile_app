@@ -23,6 +23,17 @@
             background-color: rgb(70, 70, 70);
             border-radius: 36%;
         }
+        .back{
+            height: 54px;
+            width: 56px;
+            position: absolute;
+            top:20px;
+            left: 5%;
+            padding: 0%;
+            color: rgb(70, 70, 70);
+            background-color: rgb(70, 70, 70);
+            border-radius: 36%;
+        }
 
         .page{
             position: relative;
@@ -31,6 +42,7 @@
         .image{
             width: 100%;
             position: relative;
+            height: 50%;
         }
 
         .keyboardtext{
@@ -103,12 +115,12 @@
         }
         .Order{
             display: block;
-            margin-left: 130px;
-            margin-top: 20px;
+            margin-left: 33%;
+            margin-top: 5%;
             background-color: #003FCC;
             color: white;
-            padding: 20px;
-            font-size: 16px;
+            padding: 6%;
+            font-size: 100%;
             border-radius: 20px;
             border: none;
         }
@@ -123,6 +135,7 @@
             text-align: center;
             left: 10%;
             width: 60%;
+            transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
 
         
@@ -140,6 +153,12 @@
         <button class="settings"> 
             <img src="res/icons8-settings-48.png" onclick="location.replace('settings.html')">
             </button>
+            <button class="back"> 
+                <img src="res/backwards.png" onclick="location.replace('main_page.html')">
+                </button>
+
+
+
         <div class="keyboardtext">
             
             <h2 class="Ktext"><strong>Keyboards</strong></h2>
