@@ -9,13 +9,14 @@
 <body>
     <!-- Daniel --->
     <header class="logoheader">
+
         <img src="res/booku.png" onclick= "location.replace('main_page.html')"></img>
         <br>
         
         
         <h1 class="header1">BookU</h1>
-        <button class="settings">
-            </button></header>
+        
+            </header>
      
      <div class="search-container">
         <a href=""><img src="res/588a6507d06f6719692a2d15 (1).png" alt="" class="three-lines"></a>
@@ -23,9 +24,30 @@
         <a href=""><img src="res/search.png" alt="" class="Search-symbol"></a>
 
     </div>
+    
+
+  <!-- Google Translate Script -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,es,fr,de,ja,zh-CN',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 
     
       <style>
+         
+
+     #textContent {
+  margin-top: 20px;
+  font-size: 24px;
+}
        .header1 {
         color: white;
         font-size: 150%;
@@ -218,6 +240,11 @@
         <div class="container">
             <h1>Language and Region</h1>
             <button class="expand-btn"><img src="res/58f8bcf70ed2bdaf7c128307.png" alt="down-arrow" class="down-arrow"></button>
+            <br>
+            <br>
+            <div id="google_translate_element"></div>
+
+            <div id="textContent">Hello, this is a test of Google Translate integration!</div>
         </div>
 
 
@@ -237,7 +264,7 @@
   
     
      <div class="back-button1">
-        <a href="#homepage"><img src="res/vecteezy_black-arrows-direction_29802157.png" alt="back-button" class="back-button"></a>
+        <a href="/main_page.html"><img src="res/vecteezy_black-arrows-direction_29802157.png" alt="back-button" class="back-button"></a>
      </div>
 
     
@@ -263,7 +290,7 @@
     .dark-mode25{
         width: 100%;
         background-color: rgb(230, 230, 230);
-        border-radius: 10px;
+        border-radius: 20px;
         height: 100px;
         padding: 20px;
         margin-top: 20px;
