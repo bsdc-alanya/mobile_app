@@ -125,14 +125,21 @@
       .hidden {
         opacity: 0;
         pointer-events: none;
+        display: none;
       }
       #FutureCalendar {
-        position: absolute;
+        /* position: absolute;
         top: 37%;
         text-align: center;
-        left: 10%;
-        width: 60%;
+        left: 10%; */
+        /* width: 60%; */
         transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+
+      .flex-col {
+        display: flex;
+        flex-direction: column;
+        gap: .25rem;
       }
     </style>
   </head>
@@ -173,11 +180,14 @@
             <p>Required Now</p>
           </div>
 
-          <div class="check2">
-            <input type="checkbox" id="Future" name="Future" value="true" />
-            <p>Future Booking</p>
-            <img id="FutureCalendar" src="res/calendar.jpg" class="hidden" />
+          <div class="flex-col">
+            <div class="check2">
+                <input type="checkbox" id="Future" name="Future" value="true" />
+                <p>Future Booking</p>
+              </div>
+              <img id="FutureCalendar" src="res/calendar.jpg" class="hidden" />
           </div>
+          <br>
           <p class="Request"><strong> Amount Request:</strong></p>
           <input type="number" class="amount" name="amount" />
           <button class="Order">Place Order</button>
