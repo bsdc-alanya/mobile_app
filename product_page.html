@@ -193,15 +193,36 @@
 
     </div>
     </div>
-    <!-- Alanya smells ---> 
 </body>
 <script>
     const futureBooking = document.getElementById("Future")
     const futureBookingCalendar = document.getElementById("FutureCalendar")
+    const ReqNow = document.getElementById("ReqNow")
 
-    futureBooking.addEventListener("click", function (e) {
+  
+    futureBooking.addEventListener("click", function (e) { 
         if (e.target.checked) { futureBookingCalendar.classList.remove("hidden") } 
-        else { futureBookingCalendar.classList.add("hidden") }
+        else { futureBookingCalendar.classList.add("hidden")}
     })
+
+    futureBooking.addEventListener("click", function (e) { 
+        if (e.target.checked) { futureBookingCalendar.classList.remove("hidden") } 
+        else { ReqNow.classList.remove("hidden")}
+    })
+         
+    function singleCheck(e) {
+      if (e.target === futureBooking) {
+        if (ReqNow.checked) {
+            ReqNow.checked = false;
+        }
+      } else {
+        if (futureBooking.checked) {
+            futureBooking.checked = false;
+        }
+      }
+    }
+
+    futureBooking.addEventListener("click", singleCheck);
+    ReqNow.addEventListener("click", singleCheck);
 </script>
 </html>
