@@ -1,12 +1,123 @@
+<!-- copy/pasted from admin2 since they're literally the same on figma -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Admin 1</title>
+    <title>Admin 2</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 150%;
+        }
+        header {
+            margin-bottom: 5%;
+            background-color: #fa5835;
+            border-bottom-right-radius: 5%; border-bottom-left-radius: 5%;
+            padding: 5%;
+            color: white;
+        }
+        .outside {
+            color: white;
+            padding: 2%;
+            background-color:  #dd7aff;
+            border-radius: 2em;
+            border-style: solid;
+            border-width: 10%;
+            border-color: #407aff;
+            margin-bottom: 5%;
+            display: flow-root;
+        }
+        .maincontent {
+            padding: 5%;
+            text-align: left;
+            border-radius: 2em;
+            border-style: none;
+            background-color: #faaaaa;
+        }
+        button {
+            color: white;
+            float: right;
+            border-style: solid;
+            border-width: 5%;
+            border-radius: 1em;
+            background-color: #fa5835;
+            font-size: 100%;
+            margin-right: 2%;
+        }
+        .colbutton {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <!-- lily --->
+    <header>
+        <img src="res/booku.png" style="filter: hue-rotate(140deg);"> <!-- get red/transparent version of image -->
+        <h1>Admin Page</h1><p><strong>Event view - </strong>adminname</p>
+    </header>
+    <div class="maincontent">
+        <div class="outside">
+            <table class="colbutton"><tbody><tr><th style="width: 100%">John Doe - Booked Mouse</th><th>v</th></tr></tbody></table>
+            <div class="inside" style="display: none;">
+                <p>Taken out at 9:12 04/04/2025</p>
+                <p>Booked from 03/04/2025 to 03/05/2025</p>
+                <p>Items of this type left: 160</p>
+                <button>Unbook</button>
+            </div>
+        </div>
+        <div class="outside">
+            <table class="colbutton"><tbody><tr><th style="width: 100%">Jane Doe - Returned Keyboard</th><th>v</th></tr></tbody></table>
+            <div class="inside" style="display: none;">
+                <p>Taken out at 9:12 04/04/2025</p>
+                <p>Booked from 03/04/2025 to 03/05/2025</p>
+                <p>Items of this type left: 160</p>
+                <button>Unbook</button>
+            </div>
+        </div>
+        <div class="outside">
+            <table class="colbutton"><tbody><tr><th style="width: 100%">John Doe - Returned Mouse</th><th>v</th></tr></tbody></table>
+            <div class="inside" style="display: none;">
+                <p>Taken out at 9:12 04/04/2025</p>
+                <p>Booked from 03/04/2025 to 03/05/2025</p>
+                <p>Items of this type left: 160</p>
+                <button>Unbook</button>
+            </div>
+        </div>
+        <div class="outside">
+            <table class="colbutton"><tbody><tr><th style="width: 100%">John Doe - Booked Mouse</th><th>v</th></tr></tbody></table>
+            <div class="inside" style="display: none;">
+                <p>Taken out at 9:12 04/04/2025</p>
+                <p>Booked from 03/04/2025 to 03/05/2025</p>
+                <p>Items of this type left: 160</p>
+                <button>Unbook</button>
+            </div>
+        </div>
+        <div class="outside">
+            <table class="colbutton"><tbody><tr><th style="width: 100%">Jane Doe - Booked Keyboard</th><th>v</th></tr></tbody></table>
+            <div class="inside" style="display: none;">
+                <p>Taken out at 9:12 04/04/2025</p>
+                <p>Booked from 03/04/2025 to 03/05/2025</p>
+                <p>Items of this type left: 160</p>
+                <button>Unbook</button>
+            </div>
+        </div>
+        <button onclick="window.location.href = 'admin2.html'" style="cursor: pointer;">Change to item view</button>
+        <button style="cursor: pointer;">Load more</button>
+        <br>
+    </div>
 </body>
+<script>
+    collapsables = document.getElementsByClassName("colbutton")
+
+    for (let i = 0; i != collapsables.length; i++) {
+        collapsables[i].addEventListener("click", function () {
+                nextelement = this.nextElementSibling;
+                indicator = collapsables[i].childNodes[0].childNodes[0].childNodes[1] // this sucks but i don care
+                if (nextelement.style.display == "none") { nextelement.style.display = "block"; indicator.textContent = "<" }
+                else { nextelement.style.display = "none"; indicator.textContent = "v" }
+            }
+        )
+    }
+</script>
 </html>
