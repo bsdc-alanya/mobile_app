@@ -16,22 +16,20 @@ body {
 .settings { 
     height: 54px;
     width: 56px;
-    position: absolute;
-    top:20px; right: 20px;
+    float: left;
     padding: 0%;
-    color: rgb(70, 70, 70);
-    background-color: rgb(70, 70, 70);
+    background-color: #203aff;
     border-radius: 36%;
 }
 .signout{
-    position: absolute;
-    top:20px; left: 20px;
+    float: right;
     color: white;
-    background-color: rgb(70, 70, 70);
+    background-color: #203aff;
 }
 h1 {
     color: white;
 }
+
 .scrollable {
     flex-direction: row;
     width: 100%; 
