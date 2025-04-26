@@ -26,6 +26,7 @@ body {
     float: right;
     color: white;
     background-color: #203aff;
+    border-radius: 36%;
     border-width: 0;
     font-size: 75%;
 }
