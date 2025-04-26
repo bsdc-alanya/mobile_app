@@ -39,13 +39,8 @@ h1 {
 .content {
     width: 100%;
 }
-.ordersdiv{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
 .orders {
-    display: block;
+    position: sticky; bottom: 2%;
     background-color: #003FCC;
     color: white;
     padding: 20px;
