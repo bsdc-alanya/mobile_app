@@ -29,6 +29,7 @@
             border-radius: 10%;
             padding: 5%;
         }
+        #note { color: #ffffff }
     </style>
 </head>
 <body>
@@ -36,12 +37,11 @@
         <img src="res/booku.png">
         <h1>BookU</h1>
     </header>
-    <img class="scanbutton" src="res/scan.png">
-    <br> <!-- <p> is to the right of <img> otherwise? -->
+    <img class="scanbutton" src="res/scan.png" onclick="document.getElementById('note').style.color = '#000000'">
+    <br>
     <p class="loginbutton" onclick="window.location.href = 'main_page.html'">Login</p>
-    <br>
-    <br>
-    <br>
+    <br><br>
+    <p id="note">in the real app this would open the camera so you could scan your badge, but this is just a prototype<br>so just click the login button for now<br>- amy</p>
     <br>
 </body>
 </html>
