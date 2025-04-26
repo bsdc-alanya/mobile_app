@@ -19,8 +19,7 @@
         top: 20px;
         right: 5%;
         padding: 0%;
-        color: rgb(70, 70, 70);
-        background-color: rgb(70, 70, 70);
+        background-color: #203aff;
         border-radius: 36%;
       }
       .back {
@@ -30,8 +29,7 @@
         top: 20px;
         left: 5%;
         padding: 0%;
-        color: rgb(70, 70, 70);
-        background-color: rgb(70, 70, 70);
+        background-color: #203aff;
         border-radius: 36%;
       }
 
@@ -111,9 +109,6 @@
         font-size: 20px;
       }
       .Order {
-        margin-left: 45%;
-        display: block;
-        margin-top: 20px;
         background-color: #003fcc;
         color: white;
         padding: 20px;
@@ -154,6 +149,7 @@
       </button>
       <button class="back">
         <img
+          style="width: 100%"
           src="res/backwards.png"
           onclick="window.location.href = 'main_page.html'"
         />
@@ -190,7 +186,8 @@
           <br>
           <p class="Request"><strong> Amount Request:</strong></p>
           <input type="number" class="amount" name="amount" />
-          <button class="Order">Place Order</button>
+          <br><br>
+          <button class="Order" onclick="window.location.href = 'main_page.html'">Place Order</button>
         </div>
       </div>
     </div>
