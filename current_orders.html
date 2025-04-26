@@ -12,7 +12,6 @@
       font-family: sans-serif;
       color: rgb(255, 255, 255);
       font-size: 150%;
-      width: 100%;
 
      }
      .page {
@@ -21,20 +20,30 @@
      .logoheader {
       padding: 5%;
       border-bottom-left-radius: 10%; border-bottom-right-radius: 10%;
-      background-color: #407aff;    
+      background-color: #407aff;
       }
     .logoimage {
       width: 100%;
       height:25%;
     }
-    .settings { 
+    .settings {
+        height: 54px;
+        width: 56px;
+        position: absolute;
+        top: 20px;
+        right: 5%;
+        padding: 0%;
+        background-color: #203aff;
+        border-radius: 36%;
+    }
+    .back {
       height: 54px;
       width: 56px;
       position: absolute;
-      top:20px; right: 20px;
+      top: 20px;
+      left: 5%;
       padding: 0%;
-      color: rgb(70, 70, 70);
-      background-color: rgb(70, 70, 70);
+      background-color: #203aff;
       border-radius: 36%;
     }
     #order{
@@ -47,7 +56,6 @@
     .box {
       width: 90%;
       height: 10%;
-      border: 1px solid rgb(0, 0, 0);
       margin-bottom: 4.5%;
       background: hsla(72, 3%, 67%, 0.705);
       margin-left: 3%;
@@ -79,13 +87,22 @@
 </head>
 <body>
   <header class="logoheader">
+    <button class="settings">
+      <img
+        src="res/icons8-settings-48.png"
+        onclick="window.location.href = 'settings.html'"
+      />
+    </button>
+    <button class="back">
+      <img
+        style="width: 100%"
+        src="res/backwards.png"
+        onclick="window.location.href = 'main_page.html'"
+      />
+    </button>
     <img src="res/booku.png" onclick="window.location.href = 'main_page.html'">
     <h1>BookU</h1>
-</header>
-
-<button class="settings"> 
-    <img src="res/icons8-settings-48.png" onclick="window.location.href = 'settings.html'">
-    </button>
+  </header>
 
   <div class="page" >
     <h1 id="order">Current orders</h1>
@@ -94,7 +111,7 @@
     <div class="content">
       <p>5 Mouse(s) <br> <br>
      25/03/25 -  27/04/25
-      </p>
+      </p><br>
     </div>       
   </div>
 
@@ -103,7 +120,7 @@
     <div class="content">
       <p>15 keyboard(s) <br> <br>
      04/04/25  - 18/04/25
-      </p>
+      </p><br>
     </div>   
    </div>
 
@@ -112,7 +129,7 @@
     <div class="content">
       <p>8 monitor(s) <br> <br>
      01/05/25 -  15/05/25
-      </p>
+      </p><br>
     </div>     
    </div>
 </div>
