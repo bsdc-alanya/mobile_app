@@ -48,7 +48,9 @@
 
     items = [
         {type: "Keyboard", img: "res/keyboeadfr.png"},
-        {type: "Mouse", img: "res/multicoloured-mouse.avif"}
+        {type: "Mouse", img: "res/multicoloured-mouse.avif"},
+        {type: "Laptop", img: "res/laptop.jpg"},
+        {type: "Cable", img: "res/cable.png"}
     ]
 
     for (const i in lists) {
@@ -59,12 +61,15 @@
             itemelement = document.createElement("img")
 
             itemelement.src = itemtype.img
-            itemelement.onclick = function() {window.location.href = `product_page.html?item=${itemtype.type}`}
             itemelement.style.width = "200px"
             itemelement.style.height = "200px"
             itemelement.style.borderRadius = "10%"
 
-            lists[i].appendChild(itemelement)
+            linkelement = document.createElement("a")
+            linkelement.href = `product_page.html?item=${itemtype.type}`
+
+            linkelement.append(itemelement)
+            lists[i].appendChild(linkelement)
         }
     }
   </script>
