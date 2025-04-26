@@ -133,7 +133,7 @@
         text-align: center;
         left: 10%; */
         /* width: 60%; */
-        transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
       }
 
       .flex-col {
@@ -145,7 +145,7 @@
   </head>
   <body>
     <div class="page">
-      <img class="image" src="res/keyboeadfr.png" />
+      <img class="image" src="" />
       <button class="settings">
         <img
           src="res/icons8-settings-48.png"
@@ -160,7 +160,7 @@
       </button>
 
       <div class="keyboardtext">
-        <h2 class="Ktext"><strong>Keyboards</strong></h2>
+        <h2 class="Ktext"></h2>
         <img class="stars" src="res/three-out-of-five-stars.png"/>
         <div class="under_stars">
           <div class="item">
@@ -195,6 +195,27 @@
       </div>
     </div>
   </body>
+  <!-- for syncing main page item with this page -->
+  <script>
+    items = [
+      {type: "keyboard", img: "res/Keyboardstars.png"},
+      {type: "mouse", img: "res/multicoloured-mouse.avif"}
+    ]
+
+    const urlParams = new URLSearchParams(window.location.search)
+    const item = urlParams.get('item')
+    console.log(document.getElementsByClassName("Ktext"))
+
+    document.getElementsByClassName("Ktext")[0].textContent = item;
+    // linear search
+    for (let i = 0; i != items.length; i++) {
+      if (items[i].type == item) {
+        document.getElementsByClassName("image")[0].src = items[i].img;
+        break;
+      }
+    }
+  </script>
+  <!-- for calendar popup (there's probably a way to do this with css only) -->
   <script>
     const futureBooking = document.getElementById("Future");
     const futureBookingCalendar = document.getElementById("FutureCalendar");
