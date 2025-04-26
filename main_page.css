@@ -20,11 +20,13 @@ body {
     padding: 0%;
     background-color: #203aff;
     border-radius: 36%;
+    border-width: 0;
 }
 .signout{
     float: right;
     color: white;
     background-color: #203aff;
+    border-width: 0;
 }
 h1 {
     color: white;
