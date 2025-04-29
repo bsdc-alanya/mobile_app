@@ -21,9 +21,9 @@ body {
     background-color: #203aff;
     border-radius: 30%;
     border-width: 0;
+    cursor: pointer;
 }
 .signout{
-
     font-size: 75%;
     height: 54px;
     width: 56px;
@@ -33,6 +33,7 @@ body {
     border-radius: 30%;
     border-width: 0;
     color: white;
+    cursor: pointer;
 }
 h1 {
     color: white;
