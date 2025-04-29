@@ -12,6 +12,14 @@
 
     <!-- Daniel --->
     <header class="logoheader">
+        <button class="back">
+            <img
+              style="width: 100%"
+              src="res/backwards.png"
+              onclick="window.location.href = 'main_page.html'"
+            />
+          </button>
+    
 
         <img src="res/booku.png" onclick="window.location.href = 'main_page.html'">
         <br>
@@ -119,6 +127,19 @@
    
   
   <style>
+    .back {
+        height: 7%;
+        width: 14%;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        padding: 0%;
+        background-color: #203aff;
+        border-radius: 36%;
+        border-width: 0;
+        float: right;
+        
+      }
     body {
       font-family: 'Poppins', sans-serif;
       transition: font-family 0.3s ease;
@@ -237,7 +258,7 @@
         }
     
         .logoheader {
-            padding: 5%;
+           padding: 3%;
             border-bottom-left-radius: 10%; border-bottom-right-radius: 10%;
             background-color: #407aff;
             
@@ -284,6 +305,14 @@
         .hidden {
             display: none;
         }
+    .acoount-div{
+        background-color: #464040f3;
+        height: 800px;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        border-radius: 20px;
+    }
     </style>
     </head>
     
@@ -347,6 +376,12 @@
         <div class="container">
             <h1>Account</h1>
             <button class="expand-btn"><img src="res/58f8bcf70ed2bdaf7c128307.png" alt="down-arrow" class="down-arrow"></button>
+            <br>
+            <br>
+            <div class="acoount-div">
+            <h1>past orders:</h1>
+            <h4>no past orders....</h4>
+        </div>
         </div>
 
         <div class="container">
@@ -409,10 +444,6 @@
     </script>
     
   
-    
-     <div class="back-button1">
-        <a href="/main_page.html"><img src="res/vecteezy_black-arrows-direction_29802157.png" alt="back-button" class="back-button"></a>
-     </div>
 
     
 
