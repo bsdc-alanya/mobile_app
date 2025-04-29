@@ -204,7 +204,8 @@
     ]
 
     const urlParams = new URLSearchParams(window.location.search)
-    const item = urlParams.get('item')
+    var item = urlParams.get('item')
+    if (item == null) {item = "Keyboard"}
     console.log(document.getElementsByClassName("Ktext"))
 
     document.getElementsByClassName("Ktext")[0].textContent = item;
