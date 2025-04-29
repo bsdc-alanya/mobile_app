@@ -37,6 +37,7 @@
             background-color: #faaaaa;
         }
         button {
+            cursor: pointer;
             color: white;
             float: right;
             border-style: solid;
@@ -63,7 +64,7 @@
                 <p>Taken out at 9:12 04/04/2025</p>
                 <p>Booked from 03/04/2025 to 03/05/2025</p>
                 <p>Items of this type left: 160</p>
-                <button>Unbook</button>
+                <button onclick="this.parentElement.parentElement.remove()">Unbook</button>
             </div>
         </div>
         <div class="outside">
@@ -72,7 +73,7 @@
                 <p>Taken out at 9:12 04/04/2025</p>
                 <p>Booked from 03/04/2025 to 03/05/2025</p>
                 <p>Items of this type left: 160</p>
-                <button>Unbook</button>
+                <button onclick="this.parentElement.parentElement.remove()">Unbook</button>
             </div>
         </div>
         <div class="outside">
@@ -81,7 +82,7 @@
                 <p>Taken out at 9:12 04/04/2025</p>
                 <p>Booked from 03/04/2025 to 03/05/2025</p>
                 <p>Items of this type left: 160</p>
-                <button>Unbook</button>
+                <button onclick="this.parentElement.parentElement.remove()">Unbook</button>
             </div>
         </div>
         <div class="outside">
@@ -90,7 +91,7 @@
                 <p>Taken out at 9:12 04/04/2025</p>
                 <p>Booked from 03/04/2025 to 03/05/2025</p>
                 <p>Items of this type left: 160</p>
-                <button>Unbook</button>
+                <button onclick="this.parentElement.parentElement.remove()">Unbook</button>
             </div>
         </div>
         <div class="outside">
@@ -99,7 +100,7 @@
                 <p>Taken out at 9:12 04/04/2025</p>
                 <p>Booked from 03/04/2025 to 03/05/2025</p>
                 <p>Items of this type left: 160</p>
-                <button>Unbook</button>
+                <button onclick="this.parentElement.parentElement.remove()">Unbook</button>
             </div>
         </div>
         <button onclick="window.location.href = 'admin2.html'" style="cursor: pointer;">Change to item view</button>
@@ -107,6 +108,7 @@
         <br>
     </div>
 </body>
+<!-- make events collapsible -->
 <script>
     collapsables = document.getElementsByClassName("colbutton")
 
