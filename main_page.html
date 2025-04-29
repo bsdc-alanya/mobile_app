@@ -1,123 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="main_page.css"/>
+    <link rel="stylesheet" href="style.css"/>
     <title>Home</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: sans-serif;
-            color: black;
-            font-size: 150%;
-            width: 100%;
-        }
-        .logoheader {
-            padding: 5%;
-            border-bottom-left-radius: 10%; border-bottom-right-radius: 10%;
-            background-color: #407aff;
-            
-        }
-        .logoimage {
-        width: 100%;
-        height:25%;
-        }
-        .settings { 
-            height: 54px;
-            width: 56px;
-            position: absolute;
-            top:20px; left: 20px;
-            padding: 0%;
-            color: rgb(70, 70, 70);
-            background-color: rgb(70, 70, 70);
-            border-radius: 36%;
-        }
-            .orders {
-             height: 55px;
-             width: 110px;
-             background-color: #002a8b;
-            }
-    </style>
-</head>
-<body>
+  </head>
+  <body>
     <header class="logoheader">
-        <img src="res/booku.png"></img>
-        <h1>BookU</h1>
+      <button class="settings"> <img src="res/icons8-settings-48.png" onclick="window.location.href = 'settings.html'"/> </button>
+      <button class="signout" onclick="window.location.href = 'index.html'"> Sign<br>Out </button>
+      <img src="res/booku.png"/>
+      <h1>BookU</h1>
     </header>
-    <button class="settings"> 
-        <img src="res/icons8-settings-48.png" onclick="location.replace('settings.html')">
-        </button>
-    <style>
-    h1 {
-        color: white;
-    }
-    body {
-        text-align: center;
-        font-family: sans-serif;
-        color: rgb(0, 0, 0);
-        font-size: 150%; }
-        .scrollable {
-            
-            flex-direction: row;
-            width: 100%; 
-            height: 200px; 
-            overflow-x: auto; 
-            overflow-y: hidden; 
-            white-space: nowrap; 
-        }
-        .content {
-            width: 100%;
-        }
-        .orders {
-            display: block;
-            margin-left: 130px;
-            margin-top: 20px;
-            background-color: #003FCC;
-            color: white;
-            padding: 20px;
-            font-size: 16px;
-            border-radius: 20px;
-            border: none;
-        }
-        </style>
-<h3>Most popular</h3>  
-<div class="scrollable">
-    <div class="content">
-    <img src="res/multicoloured-mouse.avif" style="width: 200px;", ></img>
-    <img src="res/Keyboardstars.png" style="width: 200px; border-radius: 10%;"onclick="location.replace('product_page.html')"></img>
-    <img src="res/multicoloured-mouse.avif" style="width: 200px;", ></img>
-    <img src="res/Keyboardstars.png" style="width: 200px; border-radius: 10%;"onclick="location.replace('product_page.html')"></img>
-    <img src="res/multicoloured-mouse.avif" style="width: 200px;", ></img>
-    <img src="res/Keyboardstars.png" style="width: 200px; border-radius: 10%;"onclick="location.replace('product_page.html')"></img>
-    </div>
-    </div>     
-    <h3>Reccommended</h3>
+    <h3>Most popular</h3>
     <div class="scrollable">
-        <div class="content">
-       <img src="res/multicoloured-mouse.avif" style="width: 200px;", ></img>
-       <img src="res/Keyboardstars.png" style="width: 200px; border-radius: 10%;"onclick="location.replace('product_page.html')"></img>
-        <img src="res/multicoloured-mouse.avif" style="width: 200px;", ></img>
-        <img src="res/Keyboardstars.png" style="width: 200px; border-radius: 10%;"onclick="location.replace('product_page.html')"></img>
-            <img src="res/multicoloured-mouse.avif" style="width: 200px;", ></img>
-            <img src="res/Keyboardstars.png" style="width: 200px; border-radius: 10%;"onclick="location.replace('product_page.html')"></img>
-        </div>
-        </div>
-        <h3>Similar Bookings</h3> 
-        <div class="scrollable">
-            <div class="content">
-           <img src="res/multicoloured-mouse.avif" style="width: 200px;", ></img>
-           <img src="res/Keyboardstars.png" style="width: 200px; border-radius: 10%;"onclick="location.replace('product_page.html')"></img>
-            <img src="res/multicoloured-mouse.avif" style="width: 200px;", ></img>
-            <img src="res/Keyboardstars.png" style="width: 200px; border-radius: 10%;"onclick="location.replace('product_page.html')"></img>
-            <img src="res/multicoloured-mouse.avif" style="width: 200px;", ></img>
-            <img src="res/Keyboardstars.png" style="width: 200px; border-radius: 10%;"onclick="location.replace('product_page.html')"></img>
-            </div>
-            </div>
-    <br>
-    <button class="orders"></button>
-    <br>
-    <br>
-    <br>
-</body>
+      <div class="content" id="mostpopular">
+      </div>
+    </div>
+    <h3>Recommended</h3>
+    <div class="scrollable">
+      <div class="content" id="recommended">
+      </div>
+    </div>
+    <h3>Similar Bookings</h3>
+    <div class="scrollable">
+      <div class="content" id="similarbookings">
+      </div>
+    </div>
+    <br/>
+    <button class="orders" onclick="window.location.href = 'current_orders.html'">Current Orders</button>
+    <button class="orders" style="background-color: #fa5835;" onclick="window.location.href = 'admin1.html'">Admin Page</button>
+    <br/>
+    <br/>
+  </body>
+  <script>
+    function randInt(max) {
+        return Math.floor(Math.random() * max)
+    }
+
+    lists = [
+        document.getElementById("mostpopular"), 
+        document.getElementById("recommended"), 
+        document.getElementById("similarbookings")
+    ]
+
+    items = [
+        {type: "Keyboard", img: "res/keyboeadfr.png"},
+        {type: "Mouse", img: "res/multicoloured-mouse.avif"},
+        {type: "Laptop", img: "res/laptop.jpg"},
+        {type: "Cable", img: "res/cable.png"}
+    ]
+
+    for (const i in lists) {
+        itemamount = randInt(5) + 3
+        for (let j = 0; j != itemamount; j++) {
+            itemid = randInt(items.length)
+            itemtype = items[itemid]
+            itemelement = document.createElement("img")
+
+            itemelement.src = itemtype.img
+            itemelement.style.width = "200px"
+            itemelement.style.height = "200px"
+            itemelement.style.borderRadius = "10%"
+
+            linkelement = document.createElement("a")
+            linkelement.href = `product_page.html?item=${itemtype.type}`
+
+            linkelement.append(itemelement)
+            lists[i].appendChild(linkelement)
+        }
+    }
+  </script>
 </html>

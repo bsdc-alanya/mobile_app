@@ -1,118 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Current orders</title>
     <style>
-     .body{
-text-align: center;
-
-    }
-    .page{
-        position: relative;
-    }
-    body {
-        margin-left: 20%;
-        margin-right: 40%;
-
-    }
-    
-    #order{
-        margin-left: 30%;
+      body {
         text-align: center;
-        
-    }
-        .box {
-            margin-left: 30%;
-            width: 100%;
-            height: 10%;
-            border: 1px solid rgb(0, 0, 0);
-            padding: 10%;
-            margin: 10%;
-            border-radius: 1%;
-            background: hsla(72, 3%, 67%, 0.705);
+        font-family: sans-serif;
+        color: rgb(255, 255, 255);
+        font-size: 150%;
+      }
+      button {
+        font-size: 150%;
+      }
+      .page {
+        color: black;
+      }
+      .logoheader {
+        padding: 5%;
+        border-bottom-left-radius: 10%;
+        border-bottom-right-radius: 10%;
+        background-color: #407aff;
+      }
+      .settings {
+        height: 54px;
+        width: 56px;
+        float: right;
+        padding: 0%;
+        background-color: #203aff;
+        border-radius: 36%;
+        border-width: 0;
+      }
+      .back {
+        height: 54px;
+        width: 56px;
+        float: left;
+        padding: 0%;
+        background-color: #203aff;
+        border-radius: 36%;
+        border-width: 0;
+      }
+      .content {
+        color: black;
+        display: none;
+      }
+      .box {
+        width: 90%;
+        height: 10%;
+        margin-bottom: 4.5%;
+        background: #bbbbbb;
+        border-radius: 1em;
+
+        margin-left: 3%;
+      }
+      .p1 {
+        text-align: center;
+      }
+      .h1 {
+        text-align: center;
+      }
+      .collapsible {
+        background-color: #bbbbbb;
+        border-radius: 1em;
+        cursor: pointer;
+        padding: 2.5%;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 60%;
+      }
+      .active, .collapsible:hover {
+        border-radius: .75em;
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="logoheader">
+      <button class="settings">
+        <img
+          src="res/icons8-settings-48.png"
+          onclick="window.location.href = 'settings.html'"
+        />
+      </button>
+      <button class="back">
+        <img
+          style="width: 100%"
+          src="res/backwards.png"
+          onclick="window.location.href = 'main_page.html'"
+        />
+      </button>
+      <img
+        src="res/booku.png"
+        onclick="window.location.href = 'main_page.html'"
+      />
+      <h1>BookU</h1>
+    </header>
+
+    <div class="page">
+      <h1 id="order">Current orders</h1>
+      <div class="box">
+        <button style="font-size: 150%"type="button" class="collapsible">Order Number <strong>#0001</strong></button>
+        <div class="content">
+          <p>
+            5 Mouse(s) <br />
+            <br />
+            25/03/25 - 27/04/25
+          </p>
+          <br />
+        </div>
+      </div>
+
+      <div class="box">
+        <button style="font-size: 150%"type="button" class="collapsible">Order Number <strong>#0002</strong></button>
+        <div class="content">
+          <p>
+            15 keyboard(s) <br />
+            <br />
+            04/04/25 - 18/04/25
+          </p>
+          <br />
+        </div>
+      </div>
+
+      <div class="box">
+        <button style="font-size: 150%"type="button" class="collapsible">Order Number <strong>#0003</strong></button>
+        <div class="content">
+          <p>
+            8 monitor(s) <br />
+            <br />
+            01/05/25 - 15/05/25
+          </p>
+          <br />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
           }
-          .p1 {size: 0cm;
-        text-align: center;
-    } 
-    .h1 {
-text-align: center;
-
-    }
-    .collapsible {
-  background-color: hsla(72, 3%, 67%, 0.705);
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #555;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-          </style>
-
-</head>
-<body>
-    <!-- Stefan --->
-  <div class="page" >
-    <h1 id="order">Current orders</h1>
-<div class="box">
-    <button type="button" class="collapsible">Order Number #0001</button>
-    <div class="content">
-      <p>5 Mouse(s) <br> <br>
-     25/03/25 -  27/04/25
-      </p>
-    </div>       
-  </div>
-
-  <div class="box">
- <button type="button" class="collapsible">Order Number #0001</button>
-    <div class="content">
-      <p>5 Mouse(s) <br> <br>
-     25/03/25  - 27/04/25
-      </p>
-    </div>   
-   </div>
-
-   <div class="box">
-    <button type="button" class="collapsible">Order Number #0001</button>
-    <div class="content">
-      <p>5 Mouse(s) <br> <br>
-     25/03/25 -  27/04/25
-      </p>
-    </div>     
-   </div>
-</div>
-<script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-    
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    }
+        });
+      }
     </script>
-</body>
-  
+  </body>
 </html>
