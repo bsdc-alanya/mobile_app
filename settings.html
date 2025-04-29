@@ -17,16 +17,74 @@
         <br>
         
         
-        <h1 class="header1">BookU</h1>
+        <h1 class="header1" translate="no">BookU</h1>
         
             </header>
      
-     <div class="search-container">
+    <div class="search-container">
         <a href=""><img src="res/588a6507d06f6719692a2d15 (1).png" alt="" class="three-lines"></a>
-        <input type="text" id="search" placeholder="Search ...">
-        <a href=""><img src="res/search.png" alt="" class="Search-symbol"></a>
-
-    </div>
+        <input type="text" id="searchInput" placeholder="Search text..." />
+        <button onclick="highlightSearch()" class="search-btn" ><img src="res/search.png" alt="" class="Search-symbol"></button>
+      </div>
+    
+      <div id="content">
+      
+      
+    
+        <script>
+            function highlightSearch() {
+              const searchText = document.getElementById('searchInput').value.trim();
+              const content = document.getElementById('content');
+        
+              // Remove existing highlights
+              removeHighlights(content);
+        
+              if (!searchText) return;
+        
+              const regex = new RegExp(searchText, 'gi');
+              walkTextNodes(content, node => {
+                const matches = [...node.textContent.matchAll(regex)];
+                if (matches.length > 0) {
+                  const span = document.createElement('span');
+                  span.innerHTML = node.textContent.replace(regex, match => `<span class="highlight">${match}</span>`);
+                  node.replaceWith(...span.childNodes);
+                }
+              });
+            }
+        
+            function removeHighlights(container) {
+              const highlights = container.querySelectorAll('span.highlight');
+              highlights.forEach(span => {
+                span.replaceWith(span.textContent);
+              });
+            }
+        
+            function walkTextNodes(element, callback) {
+              const walker = document.createTreeWalker(
+                element,
+                NodeFilter.SHOW_TEXT,
+                {
+                  acceptNode: node => {
+                    // Skip if parent is already highlighted or script/style
+                    if (
+                      node.parentNode &&
+                      (node.parentNode.classList?.contains('highlight') ||
+                       ['SCRIPT', 'STYLE'].includes(node.parentNode.nodeName))
+                    ) {
+                      return NodeFilter.FILTER_REJECT;
+                    }
+                    return NodeFilter.FILTER_ACCEPT;
+                  }
+                },
+                false
+              );
+        
+              let node;
+              while ((node = walker.nextNode())) {
+                callback(node);
+              }
+            }
+          </script>
     
 
     
@@ -72,7 +130,25 @@
       font-size: 22px;
     }
 
-   
+    .search-container {
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      padding: 8px;
+      width:80% ;
+      font-size: 16px;
+    }
+    button  {
+      padding: 8px 12px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: #cccccc00;
+    }
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+    }
   </style>
 </head>
 
@@ -377,12 +453,7 @@
     }
     
     
-    button{
-        background-color: rgba(75, 74, 74, 0);
-        
-        
-        
-    }
+    
     .BookU-Logo{
         width: 100%;
         height: 360px;
@@ -490,6 +561,6 @@
     });
 
   </script>
-
+</div>
 </div>
 </html>
