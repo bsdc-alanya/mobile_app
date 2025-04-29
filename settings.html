@@ -23,26 +23,35 @@
             </header>
      
     <div class="search-container">
-        <a href=""><img src="res/588a6507d06f6719692a2d15 (1).png" alt="" class="three-lines"></a>
+        <div class="dropdown">
+            <button class="dropbtn"><img src="res/588a6507d06f6719692a2d15 (1).png" alt="" class="three-lines"></button>
+            <div class="dropdown-content">
+              <a href="/index.html">log out</a>
+              <a href="/admin1.html">admin</a>
+              <a href="/main_page.html">Products</a>
+            </div>
+          </div>
         <input type="text" id="searchInput" placeholder="Search text..." />
         <button onclick="highlightSearch()" class="search-btn" ><img src="res/search.png" alt="" class="Search-symbol"></button>
       </div>
     
       <div id="content">
       
-      
-    
+        
         <script>
-            function highlightSearch() {
-              const searchText = document.getElementById('searchInput').value.trim();
-              const content = document.getElementById('content');
+            const input = document.getElementById('searchInput');
+            const content = document.getElementById('content');
         
-              // Remove existing highlights
+            input.addEventListener('input', () => {
+              highlightSearch(input.value.trim());
+            });
+        
+            function highlightSearch(searchText) {
               removeHighlights(content);
-        
               if (!searchText) return;
         
-              const regex = new RegExp(searchText, 'gi');
+              const regex = new RegExp(`\\b${escapeRegExp(searchText)}\\b`, 'gi');
+        
               walkTextNodes(content, node => {
                 const matches = [...node.textContent.matchAll(regex)];
                 if (matches.length > 0) {
@@ -51,6 +60,10 @@
                   node.replaceWith(...span.childNodes);
                 }
               });
+            }
+        
+            function escapeRegExp(text) {
+              return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
             }
         
             function removeHighlights(container) {
@@ -66,7 +79,6 @@
                 NodeFilter.SHOW_TEXT,
                 {
                   acceptNode: node => {
-                    // Skip if parent is already highlighted or script/style
                     if (
                       node.parentNode &&
                       (node.parentNode.classList?.contains('highlight') ||
@@ -76,10 +88,8 @@
                     }
                     return NodeFilter.FILTER_ACCEPT;
                   }
-                },
-                false
+                }
               );
-        
               let node;
               while ((node = walker.nextNode())) {
                 callback(node);
@@ -147,7 +157,7 @@
       background-color: #cccccc00;
     }
     .highlight {
-      background-color: yellow;
+      background-color: rgba(18, 61, 177, 0.582);
       font-weight: bold;
     }
   </style>
