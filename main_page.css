@@ -19,16 +19,20 @@ body {
     float: left;
     padding: 0%;
     background-color: #203aff;
-    border-radius: 36%;
+    border-radius: 30%;
     border-width: 0;
 }
 .signout{
-    float: right;
-    color: white;
-    background-color: #203aff;
-    border-radius: 36%;
-    border-width: 0;
+
     font-size: 75%;
+    height: 54px;
+    width: 56px;
+    float: right;
+    padding: 0%;
+    background-color: #203aff;
+    border-radius: 30%;
+    border-width: 0;
+    color: white;
 }
 h1 {
     color: white;
