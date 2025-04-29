@@ -54,12 +54,12 @@
     items = [
         {type: "Keyboard", img: "res/keyboeadfr.png"},
         {type: "Mouse", img: "res/multicoloured-mouse.avif"},
-        {type: "Laptop", img: "res/laptop.jpg"},
+        {type: "Laptop", img: "res/laptop.png"},
         {type: "Cable", img: "res/cable.png"}
     ]
 
     for (const i in lists) {
-        itemamount = randInt(5) + 3
+        itemamount = randInt(8) + 4
         for (let j = 0; j != itemamount; j++) {
             itemid = randInt(items.length)
             itemtype = items[itemid]
