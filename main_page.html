@@ -1,79 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="main_page.css"/>
-    <!-- <link rel="stylesheet" href="style.css"/> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main_page.css" />
     <title>Home</title>
   </head>
   <body>
     <header class="logoheader">
-      <button class="settings"> <img src="res/icons8-settings-48.png" onclick="window.location.href = 'settings.html'"/> </button>
-      <button class="signout" onclick="window.location.href = 'index.html'"> Sign<br>Out </button>
-      <img src="res/booku.png"/>
+      <button class="back"  onclick="window.location.href = 'index.html'">
+        Sign<br>Out
+        </button>
+      <button class="settings">
+        <img
+          src="res/icons8-settings-48.png"
+          onclick="window.location.href = 'settings.html'"
+        />
+      </button>
+
+      <img src="res/booku.png" />
       <h1>BookU</h1>
     </header>
     <h3>Most popular</h3>
     <div class="scrollable">
-      <div class="content" id="mostpopular">
-      </div>
+      <div class="content" id="mostpopular"></div>
     </div>
- <link rel="stylesheet" href="Shhhh/cat.html">
     <h3>Recommended</h3>
     <div class="scrollable">
-      <div class="content" id="recommended">
-      </div>
+      <div class="content" id="recommended"></div>
     </div>
 
     <h3>Similar Bookings</h3>
     <div class="scrollable">
-      <div class="content" id="similarbookings">
-      </div>
+      <div class="content" id="similarbookings"></div>
     </div>
-    <button onclick="window.location.href = 'Shhhh/cat.html'" style="background-color: rgba(0,0,0,0); border-style: none;"> </button>
-    <br/>
+  
+    <br />
 
-    <button class="orders" onclick="window.location.href = 'current_orders.html'">Current Orders</button>
-    <br/>
-    <br/>
+    <button
+      class="orders"
+      onclick="window.location.href = 'current_orders.html'"
+    >
+      Current Orders
+    </button>
+    <br />
+    <br />
   </body>
   <script>
     function randInt(max) {
-        return Math.floor(Math.random() * max)
+      return Math.floor(Math.random() * max);
     }
 
     lists = [
-        document.getElementById("mostpopular"), 
-        document.getElementById("recommended"), 
-        document.getElementById("similarbookings")
-    ]
+      document.getElementById("mostpopular"),
+      document.getElementById("recommended"),
+      document.getElementById("similarbookings"),
+    ];
 
     items = [
-        {type: "Keyboard", img: "res/keyboeadfr.png"},
-        {type: "Laptop", img: "res/laptop.png"},
-        {type: "Mouse", img: "res/multicoloured-mouse.avif"},
-        {type: "Cable", img: "res/cable.png"}
-    ]
+      { type: "Keyboard", img: "res/keyboeadfr.png" },
+      { type: "Laptop", img: "res/laptop.png" },
+      { type: "Mouse", img: "res/multicoloured-mouse.avif" },
+      { type: "Cable", img: "res/cable.png" },
+    ];
 
     for (const i in lists) {
-        itemamount = randInt(8) + 4
-        for (let j = 0; j != itemamount; j++) {
-            itemid = randInt(items.length)
-            itemtype = items[itemid]
-            itemelement = document.createElement("img")
+      itemamount = randInt(8) + 4;
+      for (let j = 0; j != itemamount; j++) {
+        itemid = randInt(items.length);
+        itemtype = items[itemid];
+        itemelement = document.createElement("img");
 
-            itemelement.src = itemtype.img
-            itemelement.style.width = "200px"
-            itemelement.style.height = "200px"
-            itemelement.style.borderRadius = "10%"
+        itemelement.src = itemtype.img;
+        itemelement.style.width = "200px";
+        itemelement.style.height = "200px";
+        itemelement.style.borderRadius = "10%";
 
-            linkelement = document.createElement("a")
-            linkelement.href = `product_page.html?item=${itemtype.type}`
+        linkelement = document.createElement("a");
+        linkelement.href = `product_page.html?item=${itemtype.type}`;
 
-            linkelement.append(itemelement)
-            lists[i].appendChild(linkelement)
-        }
+        linkelement.append(itemelement);
+        lists[i].appendChild(linkelement);
+      }
     }
   </script>
 </html>

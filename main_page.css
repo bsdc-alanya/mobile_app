@@ -1,3 +1,4 @@
+
 body {
     text-align: center;
     font-family: sans-serif;
@@ -6,38 +7,45 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    touch-action: manipulation;
+    vertical-align: auto;
 }
+.settings {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    padding: 0%;
+    background-color: #203aff;
+    border-radius: 36%;
+    border-width: 0;
+    float: left;
+    color: white;
+  }
 .logoheader {
     padding: 5%;
     border-bottom-left-radius: 10%; border-bottom-right-radius: 10%;
     background-color: #407aff;
 }
-.logoimage {
+  .image {
     width: 100%;
-    height:25%;
-}
-.settings { 
-    height: 54px;
-    width: 56px;
+    position: relative;
+    height: 50%;
+  }
+  .back {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    padding: 0%;
+    background-color: #203aff;
+    border-radius: 36%;
+    border-width: 0;
     float: left;
-    padding: 0%;
-    background-color: #203aff;
-    border-radius: 30%;
-    border-width: 0;
-    cursor: pointer;
-}
-.signout{
-    font-size: 75%;
-    height: 54px;
-    width: 56px;
-    float: right;
-    padding: 0%;
-    background-color: #203aff;
-    border-radius: 30%;
-    border-width: 0;
     color: white;
-    cursor: pointer;
-}
+  }
 h1 {
     color: white;
 }
