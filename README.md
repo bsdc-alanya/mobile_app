@@ -17,7 +17,7 @@ HUZZAHH
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
-![alt text](image.png)
+
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
@@ -28,7 +28,7 @@ HUZZAHH
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
-![alt text](image-3.png)
+
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
@@ -37,7 +37,7 @@ HUZZAHH
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
-![alt text](image-1.png)
+
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
@@ -45,7 +45,7 @@ HUZZAHH
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
-![alt text](image-2.png)
+
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
 ![Beautiful image of Cat that would get the purest of christians happy](/res/cat_smoke-1.JPG)
