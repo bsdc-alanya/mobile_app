@@ -240,17 +240,17 @@
       }
     }
 
-    function singleCheck(e) {
-      if (e.target === futureBooking) {
-        if (ReqNow.checked) {
-          ReqNow.checked = false;
-        }
-      } else {
-        if (futureBooking.checked) {
-          futureBooking.checked = false;
-        }
-      }
-    }
+    // function singleCheck(e) {
+    //   if (e.target === futureBooking) {
+    //     if (ReqNow.checked) {
+    //       ReqNow.checked = false;
+    //     }
+    //   } else {
+    //     if (futureBooking.checked) {
+    //       futureBooking.checked = false;
+    //     }
+    //   }
+    // }
 
     futureBooking.addEventListener("click", calenderToggle);
     futureBooking.addEventListener("click", singleCheck);

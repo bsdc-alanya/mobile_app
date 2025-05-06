@@ -600,23 +600,23 @@
         }
 </style>
 <script>
- const fonts = [
-      "'Poppins', sans-serif",
-      "'Roboto', sans-serif",
-      "'Lobster', cursive",
-      "'Playfair Display', serif"
-    ];
+//  const fonts = [
+//       "'Poppins', sans-serif",
+//       "'Roboto', sans-serif",
+//       "'Lobster', cursive",
+//       "'Playfair Display', serif"
+//     ];
 
-    let currentFont = 0;
+//     let currentFont = 0;
 
-    document.getElementById("fontButton").addEventListener("click", () => {
-      currentFont = (currentFont + 1) % fonts.length;
+//     document.getElementById("fontButton").addEventListener("click", () => {
+//       currentFont = (currentFont + 1) % fonts.length;
 
-      // Apply font to all elements inside .content except .no-font-change
-      document.querySelectorAll(".content *:not(.no-font-change)").forEach(el => {
-        el.style.fontFamily = fonts[currentFont];
-      });
-    });
+//       // Apply font to all elements inside .content except .no-font-change
+//       document.querySelectorAll(".content *:not(.no-font-change)").forEach(el => {
+//         el.style.fontFamily = fonts[currentFont];
+//       });
+//     });
 
   </script>
 </div>
